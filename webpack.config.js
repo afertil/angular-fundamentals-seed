@@ -25,7 +25,7 @@ module.exports = {
     publicPath: '/build/',
     quiet: true,
     historyApiFallback: true,
-    setup: function (app) {
+    before: function (app) {
       app.use('/api', jsonServer.router('db.json'));
     },
     stats: {
